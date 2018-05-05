@@ -27,7 +27,7 @@ def connection(db_name=None):
 		return conn
 	conn.close()
 
-""" установка соединения через обратчик """
+""" установка соединения через обработчик """
 get_connection = lambda: connection('data/taskckeeper.sqlite')
  	
 
