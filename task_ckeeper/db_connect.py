@@ -46,7 +46,7 @@ def add_task(conn, task_id, task_title, task_text):
 			print(colors.color.Cyan + '\n',"="*16," DONE  ","="*16, '\n', "="*11," задача сохранена ", "="*11, '\n' + colors.color.END)
 			conn.commit()
 	except sqlite3.IntegrityError:
-		print(colors.color.Red + 'id задачи должен быть числом' + colors.color.END)
+		print(colors.color.Red + ' недопустимое значение id ' + colors.color.END)
 	
 
 """ вывод  """
