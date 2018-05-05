@@ -191,5 +191,3 @@ actions = {
     'edit': task_edit,
     'del' : task_delet,
     }
-		
-  
