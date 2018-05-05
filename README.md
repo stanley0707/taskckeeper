@@ -36,31 +36,29 @@ All commands are available from any program cycle
                   After a cycle in function task_list receives numerical value of length of the list.
     
     task       - variable in the function task_open, contains objects from the tuple.
-
-
-
-
-*func logic:
- entry          __init__.py                 db.connect.py         
+    
+    *func logic:
+    
+    entry          __init__.py                 db.connect.py         
 --------------------------------------------------------------------
- main()         task_menu()         
-               menu(params)        
+    main()         task_menu()         
+                   menu(params)        
 --------------------------------------------------------------------
- menu()                                    get_connection() 
-                                              connection()
-                                          init(params)
+    menu()                                    get_connection() 
+                                                  connection()
+                                              init(params)
 --------------------------------------------------------------------
- menu()        task_craect(params)         add_task(params) 
+    menu()        task_craect(params)         add_task(params) 
 -------------------------------------------------------------------- 
- menu()        task_list(params)           find_task_list(params)
+    menu()        task_list(params)           find_task_list(params)
 --------------------------------------------------------------------
- menu()        task_open(params)           find_task(params)
+    menu()        task_open(params)           find_task(params)
 --------------------------------------------------------------------
- menu()        task_edit(params)           edit_task(params)
+    menu()        task_edit(params)           edit_task(params)
 --------------------------------------------------------------------
- manu()        task_delet(params)          delet_task(params)
+    manu()        task_delet(params)          delet_task(params)
 --------------------------------------------------------------------
-              go_menu()             
+                  go_menu()             
 --------------------------------------------------------------------
-              task_menu()          
+                  task_menu()          
 --------------------------------------------------------------------
