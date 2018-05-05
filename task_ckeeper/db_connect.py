@@ -57,7 +57,7 @@ def find_task_list(conn):
 		with conn:
 			conn = conn.execute(SQL_SELECT_TASK_TITLE_BY_ALL)
 			while 1:
-				output_task = conn.fetchall() #забираем только превый, на тот случай, что-б удастовериться что он действительно один
+				output_task = conn.fetchall() 
 				if output_task == None:
 					break
 				#conn.close()
@@ -73,7 +73,7 @@ def find_task(conn, task_id):
 		with conn:
 			conn = conn.execute(SQL_SELECT_TASK_TITLE_BY_ID, (task_id,))
 			while 1:
-				task_id = conn.fetchone() #забираем только превый, на тот случай, что-б удастовериться что он действительно один
+				task_id = conn.fetchone() 
 				if task_id == None:
 					break
 				#conn.close()
