@@ -104,9 +104,3 @@ def delet_task(conn, task_id):
 		cursor = conn.execute(SQL_DELET_TASK, (task_id,))
 		print(colors.color.Cyan + '\n',"="*16," DONE  ","="*16, '\n', "="*11," задача удалена ", "="*11, '\n' + colors.color.END)
 		conn.commit()
-
-
-
-
-
-
