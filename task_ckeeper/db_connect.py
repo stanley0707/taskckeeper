@@ -5,7 +5,6 @@ from task_ckeeper import colors
 
 """ константы обращения """
 SQL_INSERT_TASK = 'INSERT INTO taskckeeper(task_id, task_title, task_text) VALUES (?,?,?)' 
-#SQL_INSERT_TEXT = 'INSERT INTO taskckeeper(task_text) VALUES (?)'
 SQL_SELECT_ALL = """
 	SELECT 
 	task_id, task_title, task_text, created
