@@ -27,8 +27,7 @@ All commands are available from any program cycle
                   After a cycle in function task_list receives numerical value of length of the list.
     `task`        - variable in the function task_open, contains objects from the tuple.
 *func logic:
-
-   entry        |      `__init__.py`    |      `db.connect.py`         
+`entry`         |  `__init__.py `       |      `db.connect.py`         
 --------------------------------------------------------------------
 `main()`        |   task_menu()         |
                 |   menu(params)        |
@@ -51,5 +50,3 @@ All commands are available from any program cycle
 --------------------------------------------------------------------
                 |  task_menu()          |
 --------------------------------------------------------------------
-
-
