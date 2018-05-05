@@ -1,49 +1,55 @@
 # taskckeeper
 
+Hi!
+
 Description: console module for recording, editing and deleting tasks.
 
 language: Python3
+db: SQLite3
 
 The DB listens from data/taskckeeper.sqlite (the file is created atomically).
 All commands are available from any program cycle
 
-"""
 =================== TASK_CKEEPER SCHEMA ====================
 
-arguments:
-    cmd         - переменная содержащая строчное обращение
-    
-    task_id     - переменная содержащая числовое значение или, вне обращения к db  
-                  принимает исключающие строчное значние.
-                  (пааметр обращения и идентификатор столбца бд)
-                  
-    task_title  - маркер заголовка (параметр обращения и идентификатор столбца бд)
-    task_text   - маркер текста (параметр обращения и идентификатор столбца бд)
-    created     - марке времени (параметр обращения и идентификатор столбца бд
-    
-    actions     - словарь содержащий команды
-    action      - переменная содержащая значение команды из словаря
-    chois       - переменная в функции task_delet принимающая от юзера два значения
-    output_task - переменная содержащая в себе запрос на инсерт всех задач из db,
-                  после цикла в функции task_list получает числовое значние длинны списка.
-    task        - переменная в функци task_open, содержит в себе объекты из кортежа.
+*arguments:
+    `cmd`         - variable containing lowercase
+    `task_id`     -  variable containing a numeric value or, outside of the call to db,
+                   accepts an excluding lowercase value,
+                   (The call parameter and column identifier)
+    `task_title`  - title marker (the invocation parameter and the column identifier of the db),
+    `task_text`   - text marker (the invocation parameter and the column identifier of the db),
+    `created`     - time stamp (inversion parameter and column identifier db),
+    `actions`     - dictionary containing commands,
+    `action`      - variable containing the value of a command from a dictionary,
+    `chois`       - variable in function task_delet receiving from the user two values,
+    `output_task` - variable containing the request for an insert of all tasks from db.
+                  After a cycle in function task_list receives numerical value of length of the list.
+    `task`        - variable in the function task_open, contains objects from the tuple.
+*func logic:
 
-logic:
+   entry        |      `__init__.py`    |      `db.connect.py`         
+--------------------------------------------------------------------
+`main()`        |   task_menu()         |
+                |   menu(params)        |
+--------------------------------------------------------------------
+`menu()`        |                       |   get_connection() 
+                |                       |       connection()
+                |                       |   init(params)
+--------------------------------------------------------------------
+`menu()`        |  task_craect(params)  |   add_task(params) 
+-------------------------------------------------------------------- 
+`menu()`        |  task_list(params)    |   find_task_list(params)
+--------------------------------------------------------------------
+`menu()`        |  task_open(params)    |   find_task(params)
+--------------------------------------------------------------------
+`menu()`        |  task_edit(params)    |   edit_task(params)
+--------------------------------------------------------------------
+`maenu()`       |  task_delet(params)   |   delet_task(params)
+--------------------------------------------------------------------
+                |  go_menu()            | 
+--------------------------------------------------------------------
+                |  task_menu()          |
+--------------------------------------------------------------------
 
-__init__.py                                       db.connect.py         
-    main():                                         get_connection <----> connection()   <----->  data/taskckeeper.sqlite                         
-                                                    ^                                              ^
-        menu(actions):        <---------------->    init() ----> schema.sql                        |
-                                                                                                   |
-            task_craect()      ---------------->    add_task(params) ---------------- conn --------+                          
-            task_list()       <---------------->    find_task_list(params)  |           |
-            task_open()       <---------------->    find_task(params)       |           |
-            task_edit()       <---------------->    edit_task(params)       |___________|
-            task_delet()      <---------------->    delet_task(params)      |
-            task_exit()       
-            go_menu()
-            task_menu()
-        
-        task_menu()
 
-"""
