@@ -144,7 +144,7 @@ def task_menu():
 	print (colors.color.White + 30 * '-' + colors.color.END)
 	print(
 	"""
-	new  (ключ)          Создать задачу,
+	new  task            Создать задачу,
 	open (ключ)          Открыть задачу,
 	edit (ключ)          Редактировать задачу,
 	del  (ключ)          Удалить задачу,
